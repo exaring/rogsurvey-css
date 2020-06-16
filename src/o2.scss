@@ -1,7 +1,4 @@
-// * {
-//     color: red;
-//     background: red;
-//}
+//base
 
 @import "o2-partials/styles";
 
@@ -13,4 +10,15 @@
     @import "o2-partials/mobile";
 }
 
-@import "o2-partials/o2_styles";
+// o2 styling
+
+body {
+    background: linear-gradient(#1A1F35, #86C0E2);
+}
+
+
+*, span, font, #back_btn, #next_btn, input, textarea {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu!important;
+    font-weight: 400;
+    font-style: normal;
+}
