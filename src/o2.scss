@@ -12,10 +12,15 @@
 
 // o2 styling
 
+
+
 body .maincontainer {
     background: linear-gradient(#1A1F35, #86C0E2);
 }
 
+.questiontexttable, td[bgcolor="#000000"] {
+    background: none;
+}
 
 *, span, font, #back_btn, #next_btn, input, textarea {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu!important;

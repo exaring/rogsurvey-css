@@ -922,6 +922,9 @@ body .maincontainer {
   background: -webkit-gradient(linear, left top, left bottom, from(#1A1F35), to(#86C0E2));
   background: linear-gradient(#1A1F35, #86C0E2); }
 
+.questiontexttable, td[bgcolor="#000000"] {
+  background: none; }
+
 *, span, font, #back_btn, #next_btn, input, textarea {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu !important;
   font-weight: 400;
