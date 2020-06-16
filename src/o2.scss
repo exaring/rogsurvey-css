@@ -17,6 +17,10 @@
 body .maincontainer {
     background: url(img/blauverlauf.jpg) repeat-x;
     background-size: cover;
+
+    .maincontainer {
+        background: none;
+    }
 }
 
 .questiontexttable, td[bgcolor="#000000"] {
