@@ -919,8 +919,8 @@ a.tooltip span {
   /* Opera < 12.1 */ }
 
 body .maincontainer {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1A1F35), to(#86C0E2));
-  background: linear-gradient(#1A1F35, #86C0E2); }
+  background: url(img/blauverlauf.jpg) repeat-x;
+  background-size: cover; }
 
 .questiontexttable, td[bgcolor="#000000"] {
   background: none; }
