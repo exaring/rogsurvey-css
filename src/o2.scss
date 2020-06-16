@@ -12,7 +12,17 @@
 
 // o2 styling
 
-
+body, html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: auto;
+}
 
 body {
     background: url(img/blauverlauf.jpg) repeat-x;

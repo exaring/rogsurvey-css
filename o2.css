@@ -918,6 +918,17 @@ a.tooltip span {
   /* Internet Explorer */
   /* Opera < 12.1 */ }
 
+body, html {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-overflow-scrolling: auto; }
+
 body {
   background: url(img/blauverlauf.jpg) repeat-x;
   background-size: cover; }
