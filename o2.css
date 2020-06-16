@@ -1,3 +1,919 @@
-* {
-  color: red;
-  background: red; }
+/* apply a natural box layout model to all elements*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* set default font family to sans-serif / prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html {
+  background-color: #000 !important;
+  height: 100%;
+  outline: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  background-color: #000 !important;
+  color: #444;
+  height: 100%;
+  text-align: center;
+  margin: 0 !important; }
+
+*, span, font, #back_btn, #next_btn, input, textarea {
+  font-family: "Open Sans", sans-serif !important; }
+
+.maincontainer {
+  background-color: #000;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .75em;
+  position: relative;
+  width: 100%; }
+
+body > table > tbody > tr {
+  vertical-align: top; }
+
+/* (3 multimedia elements) */
+.toptable {
+  border-bottom: 1px solid #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-top: 6px;
+  padding: 1em .125em;
+  max-width: 1280px;
+  width: 100%; }
+
+/* - - info line top - - */
+#progoutertable {
+  border-collapse: collapse;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+
+#proginnertable {
+  border-collapse: collapse;
+  width: 100%; }
+
+.info {
+  display: none; }
+
+/* contains maintable */
+form {
+  margin-bottom: 0;
+  margin-top: 0; }
+
+/* containing question-/additionaltext, answerblock, back-/continuebuttons */
+.maintable {
+  border: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* located between info line top & questiontexttable (3 multimedia elements) */
+.maintable tbody tr td > .upperspacetable {
+  border: none;
+  /*remove border top for multiple questions*/
+  height: 30px;
+  /*spacing to previous question*/ }
+
+/* questiontext box */
+.questiontexttable {
+  background-color: #312f3c;
+  margin-bottom: 10px;
+  /*spacing between questiontext & additional text*/
+  margin-left: auto;
+  margin-right: auto;
+  padding: .75em;
+  width: 100%;
+  border-radius: 5px; }
+
+.questiontexttable tbody tr td {
+  padding: 0 !important;
+  /*correct alignment to additional text*/ }
+
+.questiontable.q_matrix {
+  width: 100%; }
+
+.answer.single, .answer.multiple {
+  border-bottom: 1px solid #c4c4c4 !important;
+  border-top: 1px solid #000;
+  padding: 0 .5em !important;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
+
+.answer.single:hover, .answer.multiple:hover {
+  border-bottom: 1px solid #36dea7 !important; }
+
+.answer.freetext {
+  border-bottom: none;
+  border-top: none; }
+
+.answer.matrix {
+  border-bottom: 1px solid #c4c4c4;
+  border-top: 1px solid #000;
+  background: #000; }
+
+.answer.checked {
+  border-bottom: 1px solid #36dea7 !important; }
+
+.answer.checked > div > span {
+  color: #36dea7 !important; }
+
+.answercol1, .answercol2 {
+  background-color: #312f3c !important;
+  position: relative; }
+
+.answercol1 div, .answercol2 div {
+  margin: auto !important;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: 0 !important; }
+
+.poptop, .popbotl, .popbotm, .popbotr, .popmokr, .popmokl, .popmidr, .popmidl {
+  display: none; }
+
+.popmidm, .popmokm {
+  background: #312f3c;
+  border: 1px solid #c4c4c4; }
+
+.popmidm {
+  border-bottom: none; }
+
+.popmidm b, .popmidm p {
+  color: #36dea7; }
+
+.popinmid {
+  margin: 6px 6px 0px; }
+
+.popmokm {
+  border-top: none;
+  height: auto; }
+
+/* - - back-/continuebutton - - */
+#back_btn, #next_btn, #popok {
+  background: none;
+  border: 2px solid #2789fc;
+  color: #FFF;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  outline: none;
+  padding: .75em 2em;
+  text-decoration: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  /* destroy safari input look ... */
+  -webkit-appearance: none;
+  border-radius: 20em; }
+
+#back_btn:hover, #next_btn:hover, #popok:hover {
+  text-decoration: none; }
+
+#next_btn, #popok {
+  font-weight: 600;
+  margin-left: 1%;
+  margin-right: 1%; }
+
+#back_btn {
+  margin-left: 1%;
+  margin-right: 1%; }
+
+#popok {
+  border: 1px solid #c4c4c4;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: .25em 2em; }
+
+b {
+  font-weight: 600; }
+
+b > b {
+  font-weight: 700; }
+
+.bottomtable {
+  border-bottom: 1px solid #333;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  width: 100%; }
+
+/* - - info line bottom - - */
+#infooutertable {
+  border-collapse: collapse; }
+
+#infoinnertable {
+  border-collapse: collapse; }
+
+@-webkit-keyframes greenPulse {
+  from {
+    background-color: #36dea7;
+    -webkit-box-shadow: 0 0 9px #333;
+    box-shadow: 0 0 9px #333; }
+  50% {
+    background-color: #22ffb6;
+    -webkit-box-shadow: 0 0 18px #2eb085;
+    box-shadow: 0 0 18px #2eb085; }
+  to {
+    background-color: #36dea7;
+    -webkit-box-shadow: 0 0 9px #333;
+    box-shadow: 0 0 9px #333; } }
+
+@keyframes greenPulse {
+  from {
+    background-color: #36dea7;
+    -webkit-box-shadow: 0 0 9px #333;
+    box-shadow: 0 0 9px #333; }
+  50% {
+    background-color: #22ffb6;
+    -webkit-box-shadow: 0 0 18px #2eb085;
+    box-shadow: 0 0 18px #2eb085; }
+  to {
+    background-color: #36dea7;
+    -webkit-box-shadow: 0 0 9px #333;
+    box-shadow: 0 0 9px #333; } }
+
+.greenPulse {
+  -webkit-animation-name: greenPulse;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: greenPulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  color: #000 !important; }
+
+.outerprogress {
+  background-color: #20447d;
+  height: 6px;
+  width: 100%; }
+
+.innerprogress {
+  background-color: #4188fb;
+  float: left;
+  height: 100%;
+  -webkit-transition: width 1.5s, height 1.5s, background-color 1.5s, -webkit-transform 1.5s;
+  transition: width 1.5s, height 1.5s, background-color 1.5s, -webkit-transform 1.5s;
+  transition: width 1.5s, height 1.5s, background-color 1.5s, transform 1.5s;
+  transition: width 1.5s, height 1.5s, background-color 1.5s, transform 1.5s, -webkit-transform 1.5s; }
+
+.textprogress {
+  color: #999;
+  font-size: .75em;
+  font-weight: 600;
+  margin-bottom: .25em;
+  text-align: left;
+  text-shadow: 1px 1px 1px black;
+  z-index: 2; }
+
+/* -------------------------------------------------
+                 ADDITIONAL PAGES
+------------------------------------------------- */
+/*adjustments...*/
+table {
+  text-align: center; }
+
+/*thx...*/
+div.maincontainer > .upperspacetable, div.maincontainer > .mainspacertable {
+  display: none; }
+
+.col1.tt01, .col1.tt03, .col1.bt01, .col1.bt03 {
+  display: none; }
+
+.additionalpagetext {
+  color: #F1F1F1;
+  font-size: 1em; }
+
+.additionalpagetext a {
+  background-color: #312565;
+  display: inline-block;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  font-size: 0.875em;
+  font-weight: 600;
+  outline: none;
+  padding: .5em 10px;
+  text-align: center; }
+
+a.defaultlink {
+  background: none;
+  border-bottom: 1px solid #00D3B7;
+  display: inline-block;
+  color: #FFFFFF !important;
+  cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  outline: none;
+  padding: 0;
+  text-align: inherit; }
+
+/* -------------------------------------------------
+                 EXTRA STYLING
+------------------------------------------------- */
+/* - - textfields - - */
+textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
+  background: #312f3c !important;
+  border: 1px solid #c4c4c4;
+  color: #F1F1F1 !important;
+  font-size: 1em;
+  outline: 0 none;
+  padding: .375em 1em;
+  text-shadow: 1px 1px 1px black;
+  vertical-align: middle;
+  /***/
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  max-width: 100% !important;
+  height: inherit !important;
+  margin-bottom: .125em; }
+
+input[type="number"], input[name="show"] {
+  text-align: center; }
+
+input[name="show"] {
+  background: #312f3c !important;
+  border: 1px solid #cad7de;
+  color: #F1F1F1 !important;
+  font-weight: 600;
+  padding: .375em 1em;
+  font-size: 1em;
+  outline: 0 none;
+  text-shadow: 1px 1px 1px black;
+  vertical-align: middle;
+  max-width: 100% !important; }
+
+textarea:hover, input:hover[type="text"], input:hover[type="number"], input:hover[type="email"], input:hover[type="password"], select:hover, textarea:focus, input:focus[type="text"], input:focus[type="number"], input:focus[type="email"], input:focus[type="password"], select:focus {
+  background: #312f3c !important;
+  border: 1px solid #cad7de;
+  color: #F1F1F1 !important;
+  outline: 0 none;
+  max-width: 100% !important; }
+
+/* -------------------------------------------------
+                 TYPOGRAPHY
+------------------------------------------------- */
+/* - - links - - */
+/* NUKE LAYOUTSETTINGS */
+a {
+  color: #FFF !important; }
+
+a:link {
+  color: #FFF !important; }
+
+a:visited {
+  color: #FFF !important; }
+
+a:hover {
+  color: #FFF !important; }
+
+a:active {
+  color: #FFF !important; }
+
+a {
+  background: transparent;
+  /*remove the gray background color from active links in IE 10.*/ }
+
+a:active,
+a:hover {
+  outline: 0;
+  /*improve readability when focused and also mouse hovered in all browsers.*/ }
+
+a {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+h1 {
+  font-size: 22px;
+  color: #333;
+  margin: 0;
+  padding-left: 20px;
+  float: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin-bottom: 5px;
+  color: #08c; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0;
+  text-transform: none; }
+
+h1 {
+  font-weight: 200;
+  font-size: 44px; }
+
+h2 {
+  font-weight: 200;
+  font-size: 37px; }
+
+h3 {
+  font-weight: 500;
+  font-size: 27px; }
+
+h4 {
+  font-weight: 500;
+  font-size: 23px; }
+
+h5 {
+  font-weight: 500;
+  font-size: 17px; }
+
+h6 {
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #444; }
+
+/* - - textselection - - */
+/* - - text-level semantics - - */
+abbr[title] {
+  border-bottom: 1px dotted;
+  /*address styling not present in IE 8/9/10/11, Safari, and Chrome.*/ }
+
+b, strong {
+  font-weight: bold;
+  /*address style set to `bolder` in Firefox 4+, Safari, and Chrome.*/ }
+
+b {
+  font-weight: 600; }
+
+strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic;
+  /* address styling not present in Safari and Chrome.*/ }
+
+/*address styling not present in IE 8/9.*/
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%;
+  /*address inconsistent and variable font size in all browsers.*/ }
+
+/*prevent `sub` and `sup` affecting `line-height` in all browsers.*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* - - embedded content - - */
+img {
+  border: 0;
+  /*remove border when inside `a` element in IE 8/9/10.*/ }
+
+svg:not(:root) {
+  overflow: hidden;
+  /*correct overflow not hidden in IE 9/10/11.*/ }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  -moz-box-sizing: content-box; }
+
+/* - - helpful classes - - */
+.width100 {
+  width: 100%; }
+
+.width75 {
+  width: 75%; }
+
+.width50 {
+  width: 50%; }
+
+.floatLeft {
+  float: left; }
+
+.floatRight {
+  float: right; }
+
+.alignLeft {
+  text-align: left; }
+
+.alignRight {
+  text-align: right; }
+
+td {
+  padding: 0 !important; }
+
+img {
+  border: 0; }
+
+img.rounded {
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px; }
+
+img.outlined {
+  border: 1px solid #333; }
+
+/* - - tooltip - - */
+a.tooltip {
+  outline: none; }
+
+a.tooltip strong {
+  line-height: 30px; }
+
+a.tooltip:hover {
+  text-decoration: none; }
+
+a.tooltip span {
+  display: none;
+  line-height: 16px;
+  margin-top: 60px;
+  margin-left: -160px;
+  padding: 14px 14px;
+  /*width:300px;*/
+  z-index: 10; }
+
+a.tooltip:hover span {
+  background: #333;
+  border: 2px solid #FFF;
+  color: #EEE;
+  display: inline;
+  position: absolute; }
+
+.callout {
+  border: 0;
+  left: 120px;
+  position: absolute;
+  top: -14px;
+  z-index: 20; }
+
+/*CSS3 extras*/
+a.tooltip span {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  /*opacity:0.8;*/ }
+
+/* Layout V30 */
+@media (min-width: 721px) {
+  .maincontainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+  /* (3 multimedia elements) */
+  .toptable {
+    height: 80px; }
+  /*remove top left and top right mme*/
+  table.toptable > tbody > tr > th.col1, table.toptable > tbody > tr > th.col3 {
+    display: none; }
+  table.toptable > tbody > tr > .col2 img {
+    width: 258px;
+    max-width: 61.8%; }
+  /* - - info line top - - */
+  /* containing question-/additionaltext, answerblock, back-/continuebuttons */
+  .maintable {
+    padding: 20px 0 20px 0;
+    /*inner spacing left/right of the actual survey box*/
+    width: 100%;
+    max-width: 1280px; }
+  /* questiontext box */
+  .questiontexttable {
+    margin-bottom: 10px;
+    /*spacing between questiontext & additional text*/ }
+  /* questiontext alignment */
+  /* questiontext special format */
+  /* additional text alignment */
+  .maintable > tbody > tr > td > div {
+    padding: 5px; }
+  /* table between question-/additionaltext and answerblock (3 multimedia elements) */
+  .mainspacertable {
+    height: 5px !important;
+    /*set space between question-/additionaltext and answerblock*/ }
+  /* -------------------------------------------------
+                 ANSWERBLOCK
+------------------------------------------------- */
+  /* - - answerblock consisting 5 cells:meultimedia element left - empty cell - answerblock("maininnertabletd3") - empty cell with blank space - multimediaelement right - - */
+  .maininnertable {
+    margin-left: auto;
+    margin-right: auto; }
+  /* - - center table cell of the maininnertable - containing table.questiontable - - */
+  /* - - actual answerblock - - */
+  /* add inner/outer spacing to all answeritems */
+  .questiontable tbody tr td div {
+    margin: 6px 3px; }
+  /*checkboxes/Radiobuttons Single/Multple*/
+  .questiontable.q_single > tbody > tr > td:nth-child(2) > a > img, .questiontable.q_multiple > tbody > tr > td:nth-child(2) > a > img {
+    width: 32px; }
+  /*checkboxes/Radiobuttons Matrix*/
+  .questiontable.q_matrix > tbody > tr:nth-child(n+2) > td:nth-child(n+3) > img {
+    width: 32px; }
+  .questiontable.q_matrix tr[id*='qt'] td {
+    border-bottom: 1px solid #333; }
+  /*matrix coloumns*/
+  .answercol1 span, .answercol2 span {
+    font-size: 12px !important;
+    /*set individual font size*/ }
+  .answercol1, .answercol2 {
+    padding: 2px 0px 4px !important;
+    vertical-align: top;
+    width: 80px; }
+  /* - - comment box - - */
+  .commenttable {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    /*set space between commentbox & answerblock*/ }
+  .commenttable tbody tr th {
+    padding: 0 !important;
+    /*nuke cellpadding for correct aligmnent*/ }
+  .commenttable tbody tr td {
+    padding: 0 !important;
+    /*nuke cellpadding for correct aligmnent*/ }
+  /* - - back-/continuebutton - - */
+  #back_btn {
+    margin-top: 30px;
+    /*set space between buttons & answerblock/commentbox*/ }
+  #next_btn {
+    margin-top: 30px;
+    /*set space between buttons & answerblock/commentbox*/ }
+  /* (3 multimedia elements) */
+  .bottomtable {
+    width: 100%; }
+  /* - - info line bottom - - */
+  /* -------------------------------------------------
+                 ADDITIONAL PAGES
+------------------------------------------------- */
+  td.col1.tt01, td.col2.tt02, td.col3.tt03 {
+    text-align: center; }
+  .additionalpagetext {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    text-align: left;
+    width: 980px; }
+  /* - - "counterpart" toptable td's - - */
+  /* -------------------------------------------------
+                 EXTRA STYLING
+------------------------------------------------- */
+  /* - - textfields - - */
+  textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
+    resize: none;
+    vertical-align: middle; } }
+
+@media screen and (max-width: 720px) and (max-width: 375px) {
+  .maincontainer {
+    padding: .25em !important; }
+  .toptable {
+    margin-bottom: .5em; }
+  .questiontexttable span {
+    font-size: 1em !important; }
+  .answer span {
+    font-size: .875em !important; } }
+
+@media screen and (max-width: 720px) and (min-width: 480px) {
+  .maincontainer {
+    padding: .5em !important; } }
+
+@media (max-width: 720px) {
+  /* (3 multimedia elements) */
+  .toptable img {
+    width: 318px;
+    max-width: 61.8% !important; }
+  /* - - info line top - - */
+  /* containing question-/additionaltext, answerblock, back-/continuebuttons */
+  .maintable {
+    width: 100%; }
+  /* questiontext box */
+  .questiontexttable {
+    margin-bottom: 10px;
+    /*spacing between questiontext & additional text*/ }
+  /* questiontext alignment */
+  /* questiontext special format */
+  /* additional text alignment */
+  .maintable > tbody > tr > td > div {
+    padding: 5px; }
+  /* table between question-/additionaltext and answerblock (3 multimedia elements) */
+  .mainspacertable {
+    /*set additional space between question-/additionaltext and answerblock*/
+    height: 5px !important; }
+  /* -------------------------------------------------
+                 ANSWERBLOCK
+------------------------------------------------- */
+  /* - - answerblock consisting 5 cells:multimedia element left - empty cell - answerblock("maininnertabletd3") - empty cell with blank space - multimediaelement right - - */
+  .maininnertable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+  /* - - center table cell of the maininnertable - containing table.questiontable - - */
+  .maininnertabletd3 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+  /* - - actual answerblock - - */
+  .questiontable {
+    margin-left: auto;
+    margin-right: auto; }
+  /* add inner/outer spacing to all answeritems */
+  .questiontable tbody tr td div {
+    border: none;
+    margin: 3px 0;
+    padding: 3px 1px; }
+  /*mobile optimization single/multichoice*/
+  table.maininnertable > tbody > tr > td:nth-child(1) {
+    /* display:none; */ }
+  table.maininnertable > tbody > tr > td:nth-child(2) {
+    display: none; }
+  table.maininnertable > tbody > tr > td:nth-child(4) {
+    display: none; }
+  table.maininnertable > tbody > tr > td:nth-child(5) {
+    display: none; }
+  .questiontable tbody tr td:nth-child(1) {
+    /* display:none; */ }
+  .questiontable.q_single tbody tr td:nth-child(1), .questiontable.q_multiple tbody tr td:nth-child(1) {
+    width: 32px; }
+  .questiontable.q_freetext {
+    max-width: 500px; }
+  .questiontable.q_single, .questiontable.q_multiple, .questiontable.q_matrix {
+    max-width: 500px;
+    width: 100%; }
+  /*checkboxes/Radiobuttons Single/Multple*/
+  .questiontable.q_single > tbody > tr > td:nth-child(1) > a > img, .questiontable.q_multiple > tbody > tr > td:nth-child(1) > a > img {
+    width: 32px; }
+  /*checkboxes/Radiobuttons Matrix*/
+  .questiontable.q_matrix > tbody > tr:nth-child(4n) > td > img {
+    width: 32px; }
+  .answer.matrix {
+    background: #312f3c !important; }
+  .questiontable.q_matrix tr[id*='qt'] td {
+    border-bottom: 16px solid #000; }
+  /*matrix coloumns*/ }
+
+@media only screen and (max-width: 720px) and (min-width: 568px) {
+  /*matrix coloumns*/
+  .answercol1 span, .answercol2 span {
+    font-size: 14px !important;
+    /*set individual font size*/ } }
+
+@media only screen and (max-width: 720px) and (min-width: 668px) {
+  /*matrix coloumns*/
+  .answercol1 span, .answercol2 span {
+    font-size: 1em !important;
+    /*set individual font size*/ } }
+
+@media (max-width: 720px) {
+  .answercol1, .answercol2 {
+    /*background-color:#FFF!important; nuke layoutsettings*/
+    padding: 2px 0px 4px !important;
+    vertical-align: top;
+    min-width: 32px !important; } }
+
+@media screen and (max-width: 720px) and (max-width: 375px) {
+  .answercol1, .answercol2 {
+    width: 19.9% !important; }
+  .answercol1 span, .answercol2 span {
+    font-size: 13px !important;
+    /*set individual font size*/ } }
+
+@media screen and (max-width: 720px) and (min-width: 480px) {
+  .answercol1, .answercol2 {
+    min-width: 19.9% !important; }
+  .answercol1 span, .answercol2 span {
+    font-size: 14px !important;
+    /*set individual font size*/ } }
+
+@media screen and (max-width: 720px) and (min-width: 600px) {
+  .answercol1, .answercol2 {
+    width: 80px !important; } }
+
+@media screen and (max-width: 720px) and (min-width: 780px) {
+  .answercol1, .answercol2 {
+    width: 100px !important;
+    padding: 0 0.5em !important; } }
+
+@media (max-width: 720px) {
+  /* - - comment box - - */
+  .commenttable {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    /*set space between commentbox & answerblock*/ }
+  .commenttable tbody tr th {
+    padding: 0 !important;
+    /*nuke cellpadding for correct aligmnent*/ }
+  .commenttable tbody tr td {
+    padding: 0 !important;
+    /*nuke cellpadding for correct aligmnent*/ }
+  /* - - back-/continuebutton - - */
+  #back_btn, #next_btn {
+    display: inline-block;
+    padding: .5em 0em !important;
+    max-width: 300px; }
+  #back_btn {
+    width: 32.2%; }
+  #next_btn {
+    width: 61.8%; } }
+
+@media screen and (max-width: 720px) and (max-width: 480px) {
+  #back_btn, #next_btn {
+    font-size: .875em !important; } }
+
+@media (max-width: 720px) {
+  /* (3 multimedia elements) */
+  .bottomtable {
+    height: 1em;
+    width: 100%; }
+  /* - - info line bottom - - */
+  /* -------------------------------------------------
+                 ADDITIONAL PAGES
+------------------------------------------------- */
+  td.col1.tt01, td.col3.tt03 {
+    display: none; }
+  td.col1.tt01, td.col2.tt02, td.col3.tt03 {
+    text-align: center; }
+  /* - - counterpart maincontainer - - */
+  .additionalpage {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; }
+  /* - - counterpart maintable - - */
+  .text {
+    background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px 10px;
+    width: 100%; }
+  .additionalpagetext {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em;
+    text-align: left; }
+  .col01, .col03 {
+    display: none; }
+  /* -------------------------------------------------
+                 EXTRA STYLING
+------------------------------------------------- */
+  /* - - textfields - - */
+  textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
+    font-size: 1em !important;
+    padding: 4px 6px;
+    resize: none;
+    resize: vertical !important; }
+  input[type="text"], input[type="password"], input[type="number"] {
+    height: 3em !important; } }
+
+@media screen and (max-width: 720px) and (max-width: 360px) {
+  .questiontable.q_matrix, .questiontable.q_freetext {
+    width: 100%; }
+  textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
+    width: 100% !important;
+    max-width: 500px; } }
+
+@media (max-width: 720px) {
+  .toptable img, .upperspacetable img, .mainspacertable img, .bottomtable img {
+    max-width: 84%; }
+  /* -------------------------------------------------
+                 TOP SECRET FEATURE
+------------------------------------------------- */
+  .maintable, .text {
+    -webkit-animation: fadein 1.6s;
+    /* Safari, Chrome and Opera > 12.1 */
+    /* Firefox < 16 */
+    /* Internet Explorer */
+    /* Opera < 12.1 */
+    animation: fadein 1.6s; }
+  @keyframes fadein {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  /* Firefox < 16 */
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0; }
+    to {
+      opacity: 1; } }
+  /* Internet Explorer */
+  /* Opera < 12.1 */ }

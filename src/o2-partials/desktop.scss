@@ -1,0 +1,182 @@
+.maincontainer{
+margin-left:auto;
+margin-right:auto;
+width:100%;
+}
+
+
+/* (3 multimedia elements) */ 
+.toptable{
+height:80px;
+}
+
+/*remove top left and top right mme*/
+table.toptable > tbody > tr > th.col1, table.toptable > tbody > tr > th.col3{
+display:none;
+}
+
+table.toptable > tbody > tr > .col2 img{
+width:258px;
+max-width:61.8%;
+}
+
+/* - - info line top - - */
+#progoutertable{}
+#proginnertable{}
+
+/* containing question-/additionaltext, answerblock, back-/continuebuttons */
+.maintable{
+padding: 20px 0 20px 0; /*inner spacing left/right of the actual survey box*/
+width:100%;
+max-width: 1280px;
+}
+
+/* questiontext box */
+.questiontexttable{
+margin-bottom:10px; /*spacing between questiontext & additional text*/
+}
+
+.questiontexttable span{}
+
+
+/* questiontext alignment */
+.questiontexttable > tbody > tr > td > div{}
+
+/* questiontext special format */
+.questiontexttable tbody tr td div font{}
+
+/* additional text alignment */
+.maintable > tbody > tr > td > div{
+padding:5px;
+}
+
+/* table between question-/additionaltext and answerblock (3 multimedia elements) */
+.mainspacertable{
+height:5px!important; /*set space between question-/additionaltext and answerblock*/
+}
+
+
+
+/* -------------------------------------------------
+                 ANSWERBLOCK
+------------------------------------------------- */
+
+/* - - answerblock consisting 5 cells:meultimedia element left - empty cell - answerblock("maininnertabletd3") - empty cell with blank space - multimediaelement right - - */
+.maininnertable{
+margin-left:auto;
+margin-right:auto;
+}
+/* - - center table cell of the maininnertable - containing table.questiontable - - */
+.maininnertabletd3{}
+/* - - actual answerblock - - */
+.questiontable{}
+
+/* add inner/outer spacing to all answeritems */
+.questiontable tbody tr td div{
+margin:6px 3px;
+}
+
+
+
+/*checkboxes/Radiobuttons Single/Multple*/
+.questiontable.q_single > tbody > tr > td:nth-child(2) > a > img, .questiontable.q_multiple > tbody > tr > td:nth-child(2) > a > img{
+
+width:32px;
+}
+
+
+/*checkboxes/Radiobuttons Matrix*/
+.questiontable.q_matrix > tbody > tr:nth-child(n+2) > td:nth-child(n+3) > img{
+width:32px;
+}
+
+.questiontable.q_matrix tr[id*='qt'] td{
+border-bottom: 1px solid #333;
+}
+
+
+
+/*matrix coloumns*/
+.answercol1 span, .answercol2 span{
+font-size:12px!important; /*set individual font size*/
+}
+
+.answercol1, .answercol2{
+padding:2px 0px 4px !important;
+vertical-align:top;
+width:80px;
+}
+
+
+/* - - comment box - - */
+.commenttable{
+margin-left:auto;
+margin-right:auto;
+margin-top:10px; /*set space between commentbox & answerblock*/
+}
+.commenttable tbody tr th{
+padding:0!important; /*nuke cellpadding for correct aligmnent*/
+}
+.commenttable tbody tr td{
+padding:0!important; /*nuke cellpadding for correct aligmnent*/
+}
+
+
+/* - - back-/continuebutton - - */
+#back_btn{
+margin-top:30px; /*set space between buttons & answerblock/commentbox*/
+}
+#next_btn{
+margin-top:30px; /*set space between buttons & answerblock/commentbox*/
+}
+
+/* (3 multimedia elements) */
+.bottomtable{
+width: 100%;
+}
+
+
+/* - - info line bottom - - */
+#infooutertable{}
+#infoinnertable{}
+
+
+
+/* -------------------------------------------------
+                 ADDITIONAL PAGES
+------------------------------------------------- */
+
+td.col1.tt01, td.col2.tt02, td.col3.tt03{
+text-align:center;
+}
+
+td.col2.tt02 img{}
+
+.additionalpagetext{
+font-size:16px;
+font-weight:normal;
+margin-left:auto;
+margin-right:auto;
+padding-top: 20px;
+text-align:left;
+width:980px;
+}
+/* - - "counterpart" toptable td's - - */
+.col01, .col02, .col03{
+
+}
+
+.col02 img{} 
+
+
+/* -------------------------------------------------
+                 EXTRA STYLING
+------------------------------------------------- */
+
+/* - - textfields - - */
+textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select{
+resize:none;
+vertical-align:middle;
+}
+
+input[type="text"], input[type="number"], input[type="email"], input[type="password"]{}

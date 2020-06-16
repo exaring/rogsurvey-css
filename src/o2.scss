@@ -1,4 +1,14 @@
-* {
-    color: red;
-    background: red;
+// * {
+//     color: red;
+//     background: red;
+//}
+
+@import "o2-partials/styles";
+
+@media (min-width: 721px) {
+    @import "o2-partials/desktop";
+}
+
+@media (max-width: 720px) {
+    @import "o2-partials/mobile";
 }
