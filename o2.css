@@ -939,3 +939,6 @@ body .maincontainer {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
+
+.bottomtable {
+  display: none; }
