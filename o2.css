@@ -930,8 +930,14 @@ body .maincontainer {
   font-weight: 400;
   font-style: normal; }
 
+.answer.single, .answer.multiple {
+  border-top: none;
+  border-bottom: 2px solid #fff; }
+  .answer.single:hover, .answer.multiple:hover {
+    border-bottom-color: #6ebde9 !important; }
+
 #back_btn, #next_btn {
-  background: #65b4e4;
+  background: #6ebde9;
   border-radius: 5px;
   border: 0;
   border-bottom: 2px solid #265a8d; }
@@ -939,6 +945,9 @@ body .maincontainer {
     color: #fff;
     background-color: #0062cc;
     border-color: #005cbf; }
+
+p[style*="color:#36DEA7"] {
+  color: #6ebde9 !important; }
 
 .bottomtable {
   display: none; }

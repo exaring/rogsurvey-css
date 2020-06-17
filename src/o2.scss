@@ -12,17 +12,8 @@
 
 // o2 styling
 
-// body, html {
-//     height: 100vh;
-//     width: 100vw;
-//     overflow: hidden;
-//     margin: 0;
-//     padding: 0;
-//     position: fixed;
-//     left: 0;
-//     top: 0;
-//     -webkit-overflow-scrolling: auto;
-// }
+$blue: #6ebde9;
+// $blue: #65b4e4;
 
 body .maincontainer {
     background: url(img/blauverlauf.jpg) repeat-x;
@@ -43,8 +34,17 @@ body .maincontainer {
     font-style: normal;
 }
 
+.answer.single, .answer.multiple {
+    border-top: none;
+    border-bottom: 2px solid #fff;
+
+    &:hover {
+        border-bottom-color: $blue !important;
+    }
+}
+
 #back_btn, #next_btn {
-    background: #65b4e4;
+    background: $blue;
     border-radius: 5px;
     border: 0;
     border-bottom: 2px solid #265a8d;
@@ -54,6 +54,10 @@ body .maincontainer {
         background-color: #0062cc;
         border-color: #005cbf;
     }
+}
+
+p[style*="color:#36DEA7"] {
+    color: $blue !important;
 }
 
 .bottomtable {
