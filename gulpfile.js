@@ -4,6 +4,7 @@ var notify       = require('gulp-notify');
 var plumber      = require('gulp-plumber');
 var postcss      = require('gulp-postcss');
 var sass         = require('gulp-sass');
+var cssnanon     = require('cssnano');
 
 var src   = 'src/';
 var dist  = './';
@@ -20,7 +21,8 @@ function styles() {
     .pipe( plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe( sass())
     .pipe( postcss([
-        autoprefixer({ overrideBrowserslist: ['last 2 versions'] })
+        autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
+        cssnanon({preset: 'default'}),
     ]) )
     .pipe( gulp.dest(paths.styles.dest))
     .pipe( notify('styles passed'));
