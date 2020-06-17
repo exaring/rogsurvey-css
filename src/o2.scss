@@ -36,7 +36,7 @@ body .maincontainer {
 
 .answer.single, .answer.multiple {
     border-top: none;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff !important;
 
     &:hover {
         border-bottom-color: $blue !important;

@@ -932,7 +932,7 @@ body .maincontainer {
 
 .answer.single, .answer.multiple {
   border-top: none;
-  border-bottom: 2px solid #fff; }
+  border-bottom: 2px solid #fff !important; }
   .answer.single:hover, .answer.multiple:hover {
     border-bottom-color: #6ebde9 !important; }
 
