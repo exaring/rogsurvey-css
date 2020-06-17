@@ -22,7 +22,7 @@ function styles() {
     .pipe( sass())
     .pipe( postcss([
         autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
-        cssnanon({preset: 'default'}),
+        cssnanon({ preset: 'default' }),
     ]) )
     .pipe( gulp.dest(paths.styles.dest))
     .pipe( notify('styles passed'));
