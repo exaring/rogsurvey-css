@@ -11,17 +11,17 @@
 }
 
 // o2 styling
+//
 
+//var
 $blue: #6ebde9;
 // $blue: #65b4e4;
 
+
+//main
 body .maincontainer {
     background: url(img/blauverlauf.jpg) repeat-x;
     background-size: cover;
-
-    // .maincontainer {
-    //     background: none;
-    // }
 }
 
 .questiontexttable, td[bgcolor="#000000"] {
@@ -34,13 +34,19 @@ body .maincontainer {
     font-style: normal;
 }
 
+
+//color
 .answer.single, .answer.multiple {
     border-top: none;
     border-bottom: 2px solid #fff !important;
 
     &:hover {
-        border-bottom-color: $blue !important;
+        border-bottom: 2px solid $blue !important;
     }
+}
+
+textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
+    border: 2px solid #fff !important;
 }
 
 #back_btn, #next_btn {
@@ -56,10 +62,13 @@ body .maincontainer {
     }
 }
 
+.answer.checked > div > span,
 span[style*="color:#36DEA7"] {
     color: $blue !important;
 }
 
+
+//rmv
 .bottomtable {
     display: none;
 }
