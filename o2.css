@@ -946,7 +946,7 @@ body .maincontainer {
     background-color: #0062cc;
     border-color: #005cbf; }
 
-p[style*="color:#36DEA7"] {
+span[style*="color:#36DEA7"] {
   color: #6ebde9 !important; }
 
 .bottomtable {
