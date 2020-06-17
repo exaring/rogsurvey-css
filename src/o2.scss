@@ -1,13 +1,13 @@
-//base
+//import
 
-@import "o2-partials/styles";
+@import "o2-imports/styles";
 
 @media (min-width: 721px) {
-    @import "o2-partials/desktop";
+    @import "o2-imports/desktop";
 }
 
 @media (max-width: 720px) {
-    @import "o2-partials/mobile";
+    @import "o2-imports/mobile";
 }
 
 // o2 styling
@@ -18,7 +18,7 @@ $blue: #6ebde9;
 // $blue: #65b4e4;
 
 
-//main
+//base
 body .maincontainer {
     background: url(img/blauverlauf.jpg) repeat-x;
     background-size: cover;
