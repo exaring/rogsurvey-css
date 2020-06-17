@@ -937,7 +937,8 @@ body .maincontainer {
     border-bottom: 2px solid #6ebde9 !important; }
 
 textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
-  border: 2px solid #fff !important; }
+  border: 2px solid #fff !important;
+  background: none !important; }
 
 #back_btn, #next_btn {
   background: #6ebde9;
@@ -949,6 +950,7 @@ textarea, input[type="text"], input[type="number"], input[type="email"], input[t
     background-color: #0062cc;
     border-color: #005cbf; }
 
+.popmidm b, .popmidm p,
 .answer.checked > div > span,
 span[style*="color:#36DEA7"] {
   color: #6ebde9 !important; }

@@ -47,6 +47,7 @@ body .maincontainer {
 
 textarea, input[type="text"], input[type="number"], input[type="email"], input[type="password"], select {
     border: 2px solid #fff !important;
+    background: none !important;
 }
 
 #back_btn, #next_btn {
@@ -62,6 +63,7 @@ textarea, input[type="text"], input[type="number"], input[type="email"], input[t
     }
 }
 
+.popmidm b, .popmidm p,
 .answer.checked > div > span,
 span[style*="color:#36DEA7"] {
     color: $blue !important;
