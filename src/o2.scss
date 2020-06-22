@@ -58,14 +58,14 @@ textarea, input[type="text"], input[type="number"], input[type="email"], input[t
 .btn,
 #back_btn, 
 #next_btn {
-    background: $blue;
+    background: $blue !important;
     border-radius: 5px;
     border: 0;
     border-bottom: 2px solid #265a8d;
 
     &:active {
         color: #fff;
-        background-color: #0062cc;
+        background-color: #0062cc !important;
         border-color: #005cbf;
     }
 }
